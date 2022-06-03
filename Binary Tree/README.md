@@ -21,7 +21,8 @@ In some books, the height of the root is considered as 0. In this convention, th
 6. In a non empty binary tree, if n is the total number of nodes and e is the total number of edges, then e = n-1
 
 # Types of Binary Tree
-1. Full Binary - Tree A Binary Tree is a full binary tree if every node has 0 or 2 children. The following are the examples of a full binary tree. We can also say a full binary tree is a binary tree in which all nodes except leaf nodes have two children. 
+## 1. Full Binary  
+Tree A Binary Tree is a full binary tree if every node has 0 or 2 children. The following are the examples of a full binary tree. We can also say a full binary tree is a binary tree in which all nodes except leaf nodes have two children. 
 
 ```
               18
@@ -48,7 +49,8 @@ In some books, the height of the root is considered as 0. In this convention, th
 ```
 Practical example of Complete Binary Tree is `Binary Heap`. 
 
-2. Complete Binary Tree - A Binary Tree is a Complete Binary Tree if all the levels are completely filled except possibly the last level and the last level has all keys as left as possible
+## 2. Complete Binary Tree 
+A Binary Tree is a Complete Binary Tree if all the levels are completely filled except possibly the last level and the last level has all keys as left as possible
 ```
                18
            /       \  
@@ -65,7 +67,8 @@ Practical example of Complete Binary Tree is `Binary Heap`.
      /  \   /
     8   7  9 
 ```
-3. Perfect Binary - Tree A Binary tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level. 
+## 3. Perfect Binary 
+Tree A Binary tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level. 
 ```
                18
            /       \  
@@ -87,9 +90,15 @@ A Perfect Binary Tree of height h (where the height of the binary tree is the nu
 
 An example of a Perfect binary tree is ancestors in the family. Keep a person at root, parents as children, parents of parents as their children.
 
-4. Balanced Binary Tree - A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes. For Example, the `AVL tree` maintains O(Log n) height by making sure that the difference between the heights of the left and right subtrees is at most 1. `Red-Black trees` maintain O(Log n) height by making sure that the number of Black nodes on every root to leaf paths is the same and there are no adjacent red nodes. Balanced Binary Search trees are performance-wise good as they provide O(log n) time for search, insert and delete.
+## 4. Balanced Binary Tree 
+A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes. 
+```
+* AVL tree maintains O(Log n) height by making sure that the difference between the heights of the left and right subtrees is at most 1. 
 
-5. A degenerate (or pathological) tree A Tree where every internal node has one child. Such trees are performance-wise same as linked list.
+* Red-Black trees maintain O(Log n) height by making sure that the number of Black nodes on every root to leaf paths is the same and there are no adjacent red nodes. Balanced Binary Search trees are performance-wise good as they provide O(log n) time for search, insert and delete.
+```
+## 5. A degenerate (or pathological) tree
+ A Tree where every internal node has one child. Such trees are performance-wise same as linked list.
 ```
       10
       /
@@ -99,3 +108,23 @@ An example of a Perfect binary tree is ancestors in the family. Keep a person at
       \
       40 
 ```
+
+# Representation of binary tree
+
+```java
+    main() {
+    Node root = new Node(1);
+    root.left = new Node(2);
+    root.right = new Node(3);
+    root.right.left = new Node(5);
+    }
+
+TREE -
+          1
+        /   \
+       2     3
+            /
+           5
+```
+
+---
